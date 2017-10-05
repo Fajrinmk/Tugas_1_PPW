@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'add_friend',
     'update_status',
     'halaman_profile',
+    'dashboard',
     
 ]
 
