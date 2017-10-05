@@ -4,6 +4,6 @@ KELOMPOK 3 :
 3. Patricia Christiana
 4. Safira Amalia
 
-Link HeroKuApp : https://ppw-tugas1.herokuapp.com/ test hehehe -fajrin halo halo
+Link HeroKuApp : https://ppw-tugas1.herokuapp.com/ test hehehe -fajrin halo halo coba ya
 
 
