@@ -1,52 +1,44 @@
-{% extends "lab_5/layout/base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>LingIn</title>
+  <link rel="icon" href="http://static1.squarespace.com/static/559c1968e4b0ee9660cb563f/t/55b28e4ce4b07dd5b8929b7d/1437765197224/faviconL-553d9019v1_site_icon.png?format=1000w" type="image/gif" sizes="16x16">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
 
-{% block content %}
-<h1 class="main-title">TODOLIST</h1>
-<hr/>
-<section name="input-list" id="input-list">
-    <div class="container">
-        <form id="form" method="POST" action="{% url 'lab-5:add_todo' %}">
-            <h2>Input Todo</h2>
-            {% csrf_token %}
-            {{ todo_form }}
-            <input id="submit" type="submit" class="btn btn-lg btn-block btn-info" value="Submit">
-            <br>
-        </form>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">LingIn</a>
     </div>
-</section>
-<section name="my-list" id="my-list">
-    <div class="container">
-        <h2 class="my-list-title">My List</h2>
-        <div class="flex">
-            {% if todo %}
-                {% for data in todo %}
-                    <div class="flex-item">
-                        <div class="to-do-list">
-                            <div class="to-do-list-title">
-                                {{data.title}}
-                            </div>
-                            <div class="to-do-list-date-added">
-                                {{data.created_date}}
-                            </div>
-                            <div class="to-do-list-description">
-                                {{data.description}}
-                            </div>
-                            <div class="to-do-list-delete">
-                                <a href="{% url 'lab-5:delete_todo' data.id %}" >
-                                    <div class="to-do-list-delete-button" data-id="{{ data.id }}">Delete</div>
-                                </a>
-                            </div>
-
-                        </div>
-                    </div>
-                {% endfor %}
-            {% else %}
-            <div class="alert alert-danger text-center">
-                <strong>Oops!</strong> Tidak ada data Todo.
-            </div>
-            {% endif %}
-        </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Status</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Friends</a></li>
+        <li><a href="#">Stats</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
     </div>
-</section>
+  </div>
+</nav>
+  
+<div class="container">
+ 
+</div>
 
-{% endblock %}        
+</body>
+</html>
