@@ -6,5 +6,4 @@ KELOMPOK 3 :
 
 Link HeroKuApp : https://ppw-tugas1.herokuapp.com/ test hehehe -fajrin
 
-try try Link HeroKuApp : https://ppw-tugas1.herokuapp.com/ test hehehe -sfr
 
