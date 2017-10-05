@@ -4,12 +4,6 @@ KELOMPOK 3 :
 3. Patricia Christiana
 4. Safira Amalia
 
-
-totkwowetkweotkweotkweotkewo Link HeroKuApp : https://ppw-tugas1.herokuapp.com/
-
-abcdefghjkl;; Link HeroKuApp : https://ppw-tugas1.herokuapp.com/
-coba123 Link HeroKuApp : https://ppw-tugas1.herokuapp.com/
-
-coba123 Link HeroKuApp : https://ppw-tugas1.herokuapp.com/ test hehehe -fajrin
+Link HeroKuApp : https://ppw-tugas1.herokuapp.com/ test hehehe -fajrin
 
 
