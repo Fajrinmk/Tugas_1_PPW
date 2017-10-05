@@ -4,5 +4,5 @@ KELOMPOK 3 :
 3. Patricia Christiana
 4. Safira Amalia
 
-coba coba merge conflic Link HeroKuApp : https://ppw-tugas1.herokuapp.com/
+coba1234 Link HeroKuApp : https://ppw-tugas1.herokuapp.com/
 
