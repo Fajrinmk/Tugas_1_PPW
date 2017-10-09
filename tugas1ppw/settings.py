@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'update_status',
     'halaman_profile',
     'dashboard',
-    
 ]
 
 MIDDLEWARE = [

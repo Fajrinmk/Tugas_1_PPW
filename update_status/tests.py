@@ -32,7 +32,7 @@ class UpdateStatusUnitTest(TestCase):
 
 	def test_updateStatus_post_error_and_render_the_result(self):
 		test = 'Anonymous'
-		response_post = Client().post('/update-statu/add_status', {'status': ''})
+		response_post = Client().post('/update-status/add_status', {'status': ''})
 		self.assertEqual(response_post.status_code, 302)
 		response= Client().get('/update-status/')
 		html_response = response.content.decode('utf8')
