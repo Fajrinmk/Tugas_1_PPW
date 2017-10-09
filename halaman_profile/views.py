@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
+from .models import DataProfil
 
 # username = 'Hepzibah Smith'
 # birthday = '01 Jan'
