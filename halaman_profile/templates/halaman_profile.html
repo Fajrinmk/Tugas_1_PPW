@@ -7,10 +7,10 @@
 <section name="profil" align= center>
     <p>
         <img src="https://image.freepik.com/free-icon/profile-user-silhouette_318-40557.jpg" alt="profpic" style="width : 150px; height : 150px; border-radius:50%">
-        <h3>{{author}}</h3>
+        <h3>{{username}}</h3>
     </p>
 </section>
-<section name="bio" align= center>
+<!-- <section name="bio" align= center>
     <h2>{{username}}</h2>
     <p>
         {{birthday}}
@@ -19,7 +19,31 @@
         {{description}}
         {{email}}
     </p>    
-</section>
+</section> -->
+<table align="center" style="text-align: center">
+    {% for  in bio_dict %}
+        <tr>
+            <td align="center">birthday </td>
+            <td align="center">{{ birthday }}</td>
+        </tr>
+        <tr>
+            <td align="center"> gender </td>
+            <td align="center">{{ gender }}</td>
+        </tr>
+        <tr>
+            <td align="center"> expertise </td>
+            <td align="center">{{ expertise }}</td>
+        </tr>
+        <tr>
+            <td align="center"> description </td>
+            <td align="center">{{ description }}</td>
+        </tr>
+        <tr>
+            <td align="center"> email </td>
+            <td align="center">{{ email }}</td>
+        </tr>
+    {% endfor %}
+</table>
 <hr/>
 
 {% endblock %}
