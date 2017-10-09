@@ -20,4 +20,4 @@ def index(request):
     response ['expertise'] = expertise
     response ['description'] = description
     response ['email'] = email
-    return render(request, 'halaman_profile.html', response)
+    return render(request, 'halaman_profile/halaman_profile.html', response)
