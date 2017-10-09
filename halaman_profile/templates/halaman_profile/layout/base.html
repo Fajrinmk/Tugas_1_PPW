@@ -3,28 +3,27 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="description" content="halaman_profile">
-    <meta name="author" content="{{author}}">
     <!-- bootstrap csss -->
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">    
 
     <title> 
-        {% block title %} Profile of {author}}{% endblock %}
-    </title>
+        {% block title %} Profile of {{username}} {% endblock %}
+    </title> 
 </head>
 
-<body>
-    <header>
-        {% include "halaman_profile/partials/header.html" %}
-    </header>
-    <style>
-        #main {
-        background­-color: #303d74;
-        color: #7BC9D3;
-        font­-family: Segoe UI;
-        font­-size: 0.8em;
-        }
-    </style>
+<!-- <style>
+    h2{
+        color : #afa563;
+        text-shadow: 2px 2px #B0C4DE;
+
+    }
+    footer {
+        text-align: center;
+    }
+</style>
+ -->
+<body style="background-image:url('http://68.media.tumblr.com/c6cdb94e42a03baffb91c23420e25e1f/tumblr_mn89t2S7WE1qaaul0o1_500.jpg')">
+
     <content>
         <div class="container">
             {% block content %}
@@ -33,12 +32,6 @@
         </div>
 
     </content>
-    <footer>
-        <!-- TODO Block Footer dan include footer.html -->
-        {% block footer %}
-        {% include "halaman_profile/partials/footer.html" %}
-        {% endblock %}
-    </footer>
 
     <!-- Jquery n Bootstrap Script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

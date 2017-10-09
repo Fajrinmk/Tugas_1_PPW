@@ -25,4 +25,5 @@ urlpatterns = [
     url(r'^dashboard/', include(dashboard,namespace='dashboard')),
     url(r'^update-status'. include (update_status,namespace = 'update-status')),
     url(r'^add_friend/', include(add_friend, namespace='add_friend')),
+    url(r'^halaman_profile/', include(halaman_profile, namespace='halaman_profile')),
 ]

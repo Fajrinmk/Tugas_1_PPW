@@ -2,6 +2,7 @@ from django.test import TestCase
 from django.test import Client
 from django.urls import resolve
 from .views import index
+from .views import index, username,birthday,gender,expertise,description,email
 # Create your tests here.
 
 class halaman_profile(TestCase):
