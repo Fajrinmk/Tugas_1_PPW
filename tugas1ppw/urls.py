@@ -16,8 +16,10 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 import dashboard.urls as dashboard
+import update_status.urls as update_status
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^dashboard/', include(dashboard,namespace='dashboard')),
+    url(r'^update-status'. include (update_status,namespace = 'update-status')),
 ]
