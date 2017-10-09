@@ -7,8 +7,9 @@ response = {}
 def index(request):    
     status = Status.objects.all()
     response['status'] = status
-    html = 'status/status.html'
+    html = 'update_status/status.html'
     response['Status_form'] = Status_Form
+    response['status'] = Status.objects.filter()
     return render(request, html, response)
 
 def add_status(request):

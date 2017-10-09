@@ -5,10 +5,10 @@
 <hr/>
 <section name="input-list" id="input-list">
     <div class="container">
-        <form id="form" method="POST" action="{% url 'update-status:add_status' %}">
+        <form id="form" method="POST" action="{% url 'update-status:add-status' %}">
             <h2>Input Status</h2>
             {% csrf_token %}
-            {{ status_form }}
+            {{ Status_form }}
             <input id="submit" type="submit" class="btn btn-lg btn-block btn-info" value="Submit">
             <br>
         </form>
@@ -18,13 +18,12 @@
     <div class="container">
         <h2 class="my-list-title">My Status</h2>
 <!--         <div class="flex"> -->
-           <!--  {% if todo %} -->
                 {% for data in status %}
+                <div class="kotak" style="padding:10px;box-shadow: 0 1px 1px 1px rgba(0,0,1,0.45); background: white">
                 <p>{{data.status}}</p>
                 <p>{{data.created_date}}</p>
+                </div>
                 {% endfor %}
-            
-        
     </div>
 </section>
 
