@@ -14,3 +14,20 @@ class halaman_profile(TestCase):
         found = resolve('/halaman_profile/')
         self.assertEqual(found.func, index)
 
+    def test_halaman_profile_dict(self):
+        # Check whether bio_dict is not None Object
+        self.assertIsNotNone(username)
+        self.assertIsNotNone(birthday)
+        self.assertIsNotNone(gender)
+        self.assertIsNotNone(expertise)
+        self.assertIsNotNone(description)
+        self.assertIsNotNone(email)
+
+        # Check whether description entry is less than 3 
+        self.assertTrue(len(description) >= 5)
+
+        #Check whether expertise is less than 3
+        self.assertTrue(len(expertise) >= 3)
+
+
+
