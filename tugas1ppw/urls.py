@@ -18,12 +18,13 @@ from django.contrib import admin
 import dashboard.urls as dashboard
 import update_status.urls as update_status
 import add_friend.urls as add_friend
+import halaman_profile.urls as halaman_profile
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^dashboard/', include(dashboard,namespace='dashboard')),
     url(r'^update-status/', include(update_status,namespace = 'update-status')),
-    url(r'^add_friend/', include(add_friend, namespace='add_friend')),
+    url(r'^add-friend/', include(add_friend, namespace='add_friend')),
     url(r'^halaman_profile/', include(halaman_profile, namespace='halaman_profile')),
 ]
