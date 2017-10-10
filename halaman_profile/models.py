@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 class Expertise (models.Model):
-     # dataprofile = models.ForeignKey(DataProfil)
+     #dataprofile = models.ForeignKey(DataProfil)
      expertise = models.CharField(max_length=100)
 
      def __str__(self):
