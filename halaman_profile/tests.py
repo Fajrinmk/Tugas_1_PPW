@@ -5,7 +5,7 @@ from .views import index
 # , username,birthday,gender,expertise,description,email
 # Create your tests here.
 
-class halaman_profile(TestCase):
+class HalamanProfileUnitTest(TestCase):
 
     def test_halaman_profile_url_is_exist(self):
         response = Client().get('/halaman_profile/')
@@ -27,8 +27,8 @@ class halaman_profile(TestCase):
         # Check whether description entry is less than 3 
         self.assertTrue(len(description) >= 5)
 
-        #Check whether expertise is less than 3
-        self.assertTrue(len(expertise) >= 3)
+        # #Check whether expertise is less than 3
+        # self.assertTrue(len(expertise) >= 3)
 
 
 
