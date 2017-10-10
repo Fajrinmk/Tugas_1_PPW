@@ -18,6 +18,7 @@ from django.contrib import admin
 import dashboard.urls as dashboard
 import update_status.urls as update_status
 import add_friend.urls as add_friend
+import halaman_profile.urls as halaman_profile
 
 
 urlpatterns = [
