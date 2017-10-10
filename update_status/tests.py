@@ -16,7 +16,7 @@ class UpdateStatusUnitTest(TestCase):
 
 	def test_model_can_create_new_status(self):
 		# Creating a new activity
-		new_activity = Status.objects.create(status='mengerjakan tugas 1 ppw')
+		new_status = Status.objects.create(status='mengerjakan tugas 1 ppw')
 		# Retrieving all available activity
 		counting_all_available_status = Status.objects.all().count()
 		self.assertEqual(counting_all_available_status, 1)
@@ -24,7 +24,7 @@ class UpdateStatusUnitTest(TestCase):
 	def test_updateStatus_post_success_and_render_the_result(self):
 		test = 'Anonymous'
 		response_post = Client().post('/update-status/add_status', {'status': test})
-		self.assertEqual(response_post.status_code, 302)
+		self.assertEqual(response_post.status_code, 301)
 
 		response= Client().get('/update-status/')
 		html_response = response.content.decode('utf8')
@@ -33,7 +33,7 @@ class UpdateStatusUnitTest(TestCase):
 	def test_updateStatus_post_error_and_render_the_result(self):
 		test = 'Anonymous'
 		response_post = Client().post('/update-status/add_status', {'status': ''})
-		self.assertEqual(response_post.status_code, 302)
+		self.assertEqual(response_post.status_code, 301)
 		response= Client().get('/update-status/')
 		html_response = response.content.decode('utf8')
 		self.assertNotIn(test, html_response)
