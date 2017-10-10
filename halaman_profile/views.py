@@ -8,10 +8,10 @@ from django.http import HttpResponseRedirect
 # description = 'Antique expert. Experience as marketer for 10 years'
 # email = 'hello@smith.com'
 
-profil = DataProfil.objects.create(username ='Hepzibah Smith', birthday ='01 jan',gender = 'Female', expertise = 'Marketing Collector Public Speaking',description = 'Antique expert. Experience as marketer for 10 years', email ='hello@smith.com' )
-profil.save()
-
 def index(request):
+    profil = DataProfil.objects.create(username ='Hepzibah Smith', birthday ='01 jan',gender = 'Female', expertise = 'Marketing Collector Public Speaking',description = 'Antique expert. Experience as marketer for 10 years', email ='hello@smith.com' )
+    profil.save()
+
     html = 'halaman_profile/halaman_profile.html'
     response['username']= username
     response ['birthday'] = birthday
