@@ -37,3 +37,22 @@ class UpdateStatusUnitTest(TestCase):
 		response= Client().get('/update-status/')
 		html_response = response.content.decode('utf8')
 		self.assertNotIn(test, html_response)
+
+	def test_form_todo_input_has_placeholder_and_css_classes(self):
+		form = Status_Form()
+		self.assertIn('class="status-form-input', form.as_p())
+		self.assertIn('id="id_status"', form.as_p())
+	
+
+	def test_form_validation_for_blank_items(self):
+		form = Status_Form(data={'title': ''})
+		self.assertFalse(form.is_valid())
+		self.assertEqual(
+		    form.errors['description'],
+		    ["This field is required."]
+		    )
+
+	def test_root_url_now_is_using_index_page_from_update_status(self):
+		response = Client().get('/')
+		self.assertEqual(response.status_code,301)
+		self.assertRedirects(response,'/update-status',301,200)

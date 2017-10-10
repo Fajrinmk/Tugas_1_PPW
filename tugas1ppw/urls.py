@@ -25,6 +25,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^dashboard/', include(dashboard,namespace='dashboard')),
     url(r'^update-status/', include(update_status,namespace = 'update-status')),
+    url(r'^$',RedirectView.as_view(url='/update-status/',permanent = True), name = 'index'),
     url(r'^add_friend/', include(add_friend, namespace='add_friend')),
     url(r'^halaman_profile/', include(halaman_profile, namespace='halaman_profile')),
 ]

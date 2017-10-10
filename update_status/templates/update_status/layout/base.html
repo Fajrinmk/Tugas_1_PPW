@@ -1,40 +1,38 @@
 {% load staticfiles %}
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="UPDATE STATUS">
+    <meta name="author" content="{{author}}">
     <!-- bootstrap csss -->
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">    
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/my_css.css' %}" />
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 
     <title> 
         {% block title %} Update Status {% endblock %}
     </title> 
 </head>
 
-<!-- <style>
-    h2{
-        color : #afa563;
-        text-shadow: 2px 2px #B0C4DE;
-
-    }
-    footer {
-        text-align: center;
-    }
-</style>
- -->
-<body style="background-image:url('http://68.media.tumblr.com/c6cdb94e42a03baffb91c23420e25e1f/tumblr_mn89t2S7WE1qaaul0o1_500.jpg')">
-
+<body>
+    <header>
+        
+    </header>
     <content>
-        <div class="container">
             {% block content %}
                 <!-- content goes here -->
             {% endblock %}
-        </div>
-
     </content>
+    <footer>
+        <!-- TODO Block Footer dan include footer.html -->
+        {% block footer %}
+        {% endblock %}
+    </footer>
 
-    <!-- Jquery n Bootstrap Script -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="application/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
 </body>
 </html>

@@ -2,10 +2,13 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from .forms import Status_Form
 from .models import Status
+# from halaman_profile.views import username
 
 response = {}
-def index(request):    
-    status = Status.objects.all()
+def index(request):
+    response['author'] = 'Patricia Christiana'
+    response['username'] = username     
+    status = Status.objects.order_by('-id')
     response['status'] = status
     html = 'update_status/status.html'
     response['Status_form'] = Status_Form
