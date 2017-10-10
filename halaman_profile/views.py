@@ -1,10 +1,10 @@
 from django.shortcuts import render
 from .models import DataProfil, Expertise
 
-profil = DataProfil.objects.get(nama='Hepzibah Smith', birthday = '01 jan', gender = 'Female', expertise = 'Marketing, Collector, Public Speaking', description = 'Antique expert. Experience as marketer for 10 years', email = 'hello@smith.com')
+profil = DataProfil.objects.get(username='Hepzibah Smith')
 
 def index(request):
-    response['nama'] =profil.nama
+    response['username'] =profil.nama
     response['birthday'] = profil.birthday
     response['gender'] = profil.gender
     response['expertise'] = profil.expertise
