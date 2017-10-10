@@ -2,12 +2,13 @@ from django.shortcuts import render
 from .models import new_friend
 
 # Create your views here.
+response = {}
 def index(request):
 	#inisiasi elemen apa saja yang akan dimasukan dalam add_friend.html
 	response['author'] = 'Josua Christanto'
-	friends = new_friend.object.all()
+	friends = new_friend.objects.all()
 	response['new_friend'] = friends
-	html = '/add_friend/add_friend.html'
+	html = 'add_friend/add_friend.html'
 	return render(request,html,response) #mengirimkkan semua elemen dalam response ke alamat html
 
 def tambah_teman(request):
