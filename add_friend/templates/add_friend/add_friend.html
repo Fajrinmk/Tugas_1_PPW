@@ -5,12 +5,38 @@
 <head>
 	<title>Add More Friends</title>
 	<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Anton|Arvo" rel="stylesheet">
 </head>
+<style>
+	table{
+		border: 0;
+	}
+	.font1{
+		font-family: 'Arvo', serif;
+	}
+	.judul1{
+		font-family: 'Anton', sans-serif;
+		background-color: 
+	}
+	.submit1{
+		margin-top: 10px;
+	}
+	.pembungkus1{
+		background-color: #80C18E;
+		border-radius: 10px;
+	}
+	.jumbotron{
+		background-color: #50A162;
+	}
+	.background1{
+		background-color: #6e6f72;
+	}
+</style>
 <body>
 <div class="container">
 	<header></header>
 	
-	<div class="container">
+	<div class="container ">
 		<div class="jumbotron">
       <div class="container">
         <h1>Hello, {{author}}</h1>
@@ -21,26 +47,31 @@
 	</div>
 
 	<div class="container">
-		<div class="col-md-3"></div>
-		<div class="col-md-3">
-			<h2>Add Friend</h2>
+		<div class="col-md-4 pembungkus1 ">
+			<h2 class="judul1">Add Friend</h2>
 			<form class="navbar-form" method="POST" action="{% url 'add_friend:tambah_teman' %}">
-				<table border="0">
-					<tr>
-						<td>Your Friend's Name</td>
-						<td>:</td>
-						<td> <input type="text" placeholder="Your Friend's name" class="form-control"></td>
-					</tr>
-					<tr>
-						<td>Link Heroku</td>
-						<td>:</td>
-						<td> <input type="text" placeholder="Heroku's link" class="form-control"></td>
-					</tr>
-				</table>
-					<p><input id="submit" type="submit" class="btn btn-lg btn-block btn-info" value="Submit"></p>			
+				 
+					<p class="font1">Your Friend's name :</p> <input type="text" placeholder="Your Friend's name" class="form-control">
+					<p class="font1">Link Heroku :</p> <input type="text" placeholder="Link Heroku" class="form-control"></td>
+					<p><input id="submit" type="submit" class="btn btn-lg btn-block btn-info submit1" value="Submit"></p>			
 			</form>
 		</div>
-		<div class="col-md-3"></div>
+		<div class="col-md-8">
+			<div class="d-flex flex-column">Your Friend list
+				{% if new_friend %}
+				{% for data in new_friend %}
+				<div class="p-2">{{data.name}} : {{data.heroku_link}}</div>
+
+				{% endfor%}
+				{% else %}
+            <div class="alert alert-danger text-center">
+                <strong>Oops!</strong> Tidak ada list teman!!
+            </div>o.
+            {% endif %}
+
+			</div>
+
+		</div>
 	</div>
 	<footer></footer>
 </div>

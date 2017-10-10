@@ -7,9 +7,9 @@ class Status_Form(forms.Form):
     }
     status_attrs = {
         'type': 'text',
-        'cols' : 100,
+        'cols' : 126,
         'rows' : 4,
-        'class' : 'todo-form-textarea',
+        'class' : 'status-form-input',
         'placeholder' : 'Apa yg km pikirin sist'
     }
 

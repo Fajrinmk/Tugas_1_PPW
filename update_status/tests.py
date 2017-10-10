@@ -22,13 +22,13 @@ class UpdateStatusUnitTest(TestCase):
 		self.assertEqual(counting_all_available_status, 1)
 
 	def test_updateStatus_post_success_and_render_the_result(self):
-		test = 'Anonymous'
-		response_post = Client().post('/update-status/add_status', {'status': test})
+		new_status = Status.objects.create(status='mengerjakan tugas 1 ppw')
+		response_post = Client().post('/update-status/add_status', {'status': new_status})
 		self.assertEqual(response_post.status_code, 301)
 
 		response= Client().get('/update-status/')
 		html_response = response.content.decode('utf8')
-		self.assertIn(test, html_response)
+		self.assertIn('mengerjakan tugas 1 ppw', html_response)
 
 	def test_updateStatus_post_error_and_render_the_result(self):
 		test = 'Anonymous'
@@ -45,14 +45,9 @@ class UpdateStatusUnitTest(TestCase):
 	
 
 	def test_form_validation_for_blank_items(self):
-		form = Status_Form(data={'title': ''})
+		form = Status_Form(data={'status': ''})
 		self.assertFalse(form.is_valid())
 		self.assertEqual(
-		    form.errors['description'],
+		    form.errors['status'],
 		    ["This field is required."]
 		    )
-
-	def test_root_url_now_is_using_index_page_from_update_status(self):
-		response = Client().get('/')
-		self.assertEqual(response.status_code,301)
-		self.assertRedirects(response,'/update-status',301,200)

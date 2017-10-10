@@ -25,11 +25,11 @@ textarea {
 
 
 #input-list form{
-  width: 100%;
+  width: 50%;
   margin: 50px auto;
   position: relative;
   z-index: 1;
-  background: #ecf0f1;
+  background: #00ff00;
   border: 0 none;
   border-radius: 3px;
   box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
@@ -55,7 +55,7 @@ textarea {
     border: 1px solid #ccc;
     border-radius: 3px;
     margin-bottom: 10px;
-    width: 100%;
+    width: 50%;
     box-sizing: border-box;
     color: #2C3E50;
     font-size: 13px;
