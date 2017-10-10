@@ -11,6 +11,6 @@ def index(request):
     response['description'] = profil.description
     response['email'] = profil.email
 
-    html = 'profil.html'
+    html = 'halaman_profile/halaman_profile.html'
 
     return render(request,html,response)
