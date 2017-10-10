@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
+from .models import DataProfil
 
 # username = 'Hepzibah Smith'
 # birthday = '01 Jan'
@@ -19,4 +20,4 @@ def index(request):
     response ['expertise'] = expertise
     response ['description'] = description
     response ['email'] = email
-    return render(request, 'halaman_profile.html', response)
+    return render(request, 'halaman_profile/halaman_profile.html', response)
