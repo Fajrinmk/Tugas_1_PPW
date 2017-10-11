@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from datetime import datetime, date
+from .models import DataProfile
 
 # Create your views here.
 profile_name = 'Gigi Hadid' #TODO implement your name here
@@ -13,12 +14,15 @@ expert = ["fashion model", "actress", "wawww"]
 
 response = {}
 def index(request):
-    response['author'] = "Patricia Christiana"
-    response['Name'] = profile_name
-    response['Birthday'] = birthdate
-    response['Gender'] = gender
-    response['expertise'] = expert
-    response['Email'] = email
-    response['Description'] = desc_profile
+    # response['author'] = "Patricia Christiana"
+    # response['Name'] = profile_name
+    # response['Birthday'] = birthdate
+    # response['Gender'] = gender
+    # response['expertise'] = expert
+    # response['Email'] = email
+    # response['Description'] = desc_profile
+
+    Profile = DataProfile(name= profile_name, birthday = birthdate, gender = gender,expertise = expert, email = email, description = desc_profile )
+    response = {'Name':Profile.name, 'Birthday':Profile.birthday,'Gender':Profile.gender,'Expertise':Profile.expertise,'Email':Profile.email,'Description':Profile.description}
     return render(request, 'halaman_profile.html', response)
     
