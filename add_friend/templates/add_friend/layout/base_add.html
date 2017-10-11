@@ -1,0 +1,122 @@
+{% load staticfiles %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Arvo" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="LAB 5">
+    <meta name="author" content="{{author}}">
+    <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <!-- bootstrap csss -->
+
+    <title>
+        {% block title %} Lab 5 By {{author}} {% endblock %}
+    </title>
+</head>
+<style>
+.glyphicon-envelope{
+font-size: 105px;
+float: right;
+margin-right: 15px;
+margin-top: 20px;   
+}   
+    .add-teman{
+        margin-bottom: 30px;
+    }
+    .flex_list_nama:nth-child(odd){
+        background-color: #767676;
+        padding: 6px;
+        font-size: 20px;
+        border-radius: 8px;
+        font-family: 'Acme', sans-serif;
+    }
+    .flex_list_nama:nth-child(even){
+        background-color: #B2B2B2;
+        padding: 6px;
+        font-size: 20px;
+        border-radius: 8px;
+        font-family: 'Acme', sans-serif;
+    }
+    table{
+        border: 0;
+    }
+    .font1{
+        font-family: 'Arvo', serif;
+    }
+    .judul1,.jumbotron h1{
+        font-family: 'Anton', sans-serif;
+        /*margin-top: 100px;*/
+    }
+    .submit1{
+        margin-top: 10px;
+    }
+    .pembungkus1{
+        background-color: #E3E3E3;
+        border-radius: 10px;
+        padding-top: 5px;
+    }
+    .jumbotron{
+        /*background-color: rgba(67, 67, 67, 0.42);*/
+        background-color: rgba(248, 248, 255, 0.9);
+    }
+    .background1{
+        background-color: #6e6f72;
+    }
+    .pembungkus2{
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    .d-inline-flex p{
+        font-family: 'Orbitron', sans-serif;
+        font-size: 30px;
+        color: white;
+    }
+    .d-inline-flex .glyphicon-pencil {
+        font-size: 30px;
+        color: black;
+    }
+</style>
+<body>
+    <header>
+        {% include "lab_5/partials/header.html" %}
+    </header>
+    <content>
+            {% block content %}
+                <!-- content goes here -->
+            {% endblock %}
+    </content>
+    <footer>
+        <!-- TODO Block Footer dan include footer.html -->
+        {% block footer %}
+        {% include "lab_5/partials/footer.html" %}
+        {% endblock %}
+    </footer>
+
+    <!-- Jquery n Bootstrap Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="application/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="application/javascript">
+      $(function() {
+          $('a[href*="#"]:not([href="#"])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+              if (target.length) {
+                $('html, body').animate({
+                  scrollTop: target.offset().top - 55
+                }, 1000);
+                return false;
+              }
+            }
+          });
+        });
+    </script>
+</body>
+</html>
