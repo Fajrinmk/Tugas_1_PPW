@@ -7,10 +7,10 @@ class Status_Form(forms.Form):
     }
     status_attrs = {
         'type': 'text',
-        'cols' : 126,
+        'cols' : 149,
         'rows' : 4,
         'class' : 'status-form-input',
-        'placeholder' : 'Apa yg km pikirin sist'
+        'placeholder' : 'Apa yg anda pikirkan?'
     }
 
    

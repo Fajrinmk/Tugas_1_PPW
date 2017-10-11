@@ -50,17 +50,14 @@ textarea {
   color: #2C3E50;
   margin-bottom: 10px;
 }
-#input-list form > .todo-form-input, #input-list form > .todo-form-textarea{
+#input-list form > .status-form-input, #input-list form > .status-form-textarea{
   padding: 15px;
     border: 1px solid #ccc;
     border-radius: 3px;
     margin-bottom: 10px;
-    width: 50%;
+    width: 100%;
     box-sizing: border-box;
     color: #2C3E50;
     font-size: 13px;
 }
-
-
-
 

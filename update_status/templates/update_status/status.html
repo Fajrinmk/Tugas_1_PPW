@@ -1,30 +1,53 @@
-{% extends "base.html" %}
+{% extends "update_status/layout/base.html" %}
 
 {% block content %}
-<h1 class="main-title">Update Status</h1>
-<hr/>
+
+
 <section name="input-list" id="input-list">
     <div class="container">
-        <form id="form" method="POST" action="{% url 'update-status:add_status' %}">
-            <h2>Input Status</h2>
-            {% csrf_token %}
-            {{ Status_form }}
-            <input id="submit" type="submit" class="btn btn-lg btn-block btn-info" value="Submit">
-            <br>
-        </form>
+<!--         <div class="row"> -->
+            <div class="col-sm-500 col-sm-offset-0">
+                <form id="form" method="POST" action="{% url 'update-status:add_status' %}">
+                    <h2><strong>Input Status..</strong></h2>
+                    {% csrf_token %}
+                    {{ Status_form }}
+                    <input id="submit" type="submit" class="btn btn-md btn-info" value="Submit">
+                    <br>
+                </form>
+            </div>
+        </div> 
     </div>
 </section>
-<section name="my-list" id="my-list">
-    <div class="container">
-        <h2 class="my-list-title">My Status</h2>
-                {% for data in status %}
-                <div class="kotak" style="padding:10px;box-shadow: 0 1px 1px 1px rgba(0,0,1,0.45); background: white">
 
-                <p>{{data.status}}</p>
-                <p>{{data.created_date}}</p>
+<section name="my-list" id="my-list" style="padding-bottom: 20px">
+    {% if status %}
+    <div class="container"> 
+
+        {% for data in status %}
+            <div class="kotak" style="padding-top: 15px">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <div class="media" style="padding: 40px">
+                            <div class="media-left">
+                                <img src="https://pbs.twimg.com/profile_images/891324707189923841/-AAI8S4z_400x400.jpg" class="media-object img-circle" style="width:75px"><!--foto nanti diganti dgn foto di hal profile-->
+                                <p>{{data.status}}</p>
+                    
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading"><strong>{{profile_name}}</strong> <small><i>Posted on {{data.created_date}}</i></small></h4><!--nama nanti diganti dgn nama di hal profile-->
+                                <p>{{data.description}}</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                {% endfor %}
-    </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="alert alert-danger text-center">
+            <strong>Oops!</strong> Belum ada status.
+        </div>
+    {% endif %}
+    
 </section>
 
 {% endblock %}        
