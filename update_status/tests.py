@@ -22,13 +22,13 @@ class UpdateStatusUnitTest(TestCase):
 		self.assertEqual(counting_all_available_status, 1)
 
 	def test_updateStatus_post_success_and_render_the_result(self):
-		test = 'Anonymous'
-		response_post = Client().post('/update-status/add_status', {'status': test})
+		new_status = Status.objects.create(status='mengerjakan tugas 1 ppw')
+		response_post = Client().post('/update-status/add_status', {'status': new_status})
 		self.assertEqual(response_post.status_code, 301)
 
 		response= Client().get('/update-status/')
 		html_response = response.content.decode('utf8')
-		self.assertIn(test, html_response)
+		self.assertIn('mengerjakan tugas 1 ppw', html_response)
 
 	def test_updateStatus_post_error_and_render_the_result(self):
 		test = 'Anonymous'
@@ -37,3 +37,17 @@ class UpdateStatusUnitTest(TestCase):
 		response= Client().get('/update-status/')
 		html_response = response.content.decode('utf8')
 		self.assertNotIn(test, html_response)
+
+	def test_form_todo_input_has_placeholder_and_css_classes(self):
+		form = Status_Form()
+		self.assertIn('class="status-form-input', form.as_p())
+		self.assertIn('id="id_status"', form.as_p())
+	
+
+	def test_form_validation_for_blank_items(self):
+		form = Status_Form(data={'status': ''})
+		self.assertFalse(form.is_valid())
+		self.assertEqual(
+		    form.errors['status'],
+		    ["This field is required."]
+		    )
