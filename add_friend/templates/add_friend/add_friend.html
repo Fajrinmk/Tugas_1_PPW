@@ -40,6 +40,7 @@
 					<!-- <span class="glyphicon glyphicon-user hidden-md hidden-xs hidden-sm" aria-hidden="true"></span> -->
 					<h4 class="font1">Link Heroku :</h4>
 					<a href={{data.heroku_link}}>{{data.heroku_link}}</a>
+				
 				<a href="{% url 'add_friend:delete' data.id %}" method="POST">
                 <input class="to-do-list-delete-button btn btn-lg btn-block btn-danger submit1 " method="POST" data-id="{{data.id}}" action="{% url 'lab-5:delete' data.id %}" value="Delete"></input></a>
 				</div>
