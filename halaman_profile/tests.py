@@ -7,11 +7,11 @@ import unittest
 # Create your tests here.
 class HalamanProfileUnitTest(TestCase):
     def test_name_is_exist(self):
-        response = Client().get('/halaman-profile/')
+        response = Client().get('/halaman_profile/')
         self.assertEqual(response.status_code,200)
 
     def test_using_index_func(self):
-        found = resolve('/halaman-profile/')
+        found = resolve('/halaman_profile/')
         self.assertEqual(found.func, index)
 
     def test_all_profile_is_exist(self):
