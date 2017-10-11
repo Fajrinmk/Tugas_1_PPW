@@ -1,4 +1,7 @@
 from django.db import models
+from django.utils import timezone
+import pytz
+
 
 class Status(models.Model):
 	def converTime():
