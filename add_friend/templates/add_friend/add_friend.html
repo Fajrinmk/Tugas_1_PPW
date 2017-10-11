@@ -22,10 +22,10 @@
 		<div class="col-md-4 pembungkus1" id="input-list">
 			
 			<h2 class="judul1">Add Friend</h2>
-			<span class="glyphicon glyphicon-envelope hidden-md hidden-xs hidden-sm" aria-hidden="true"></span>
 			<form class="navbar-form form_add" method="POST" action="{% url 'add_friend:tambah_teman' %}">
 				 	{% csrf_token %}
 					<p class="font1">Your Friend's name :</p> <input type="text" placeholder="Your Friend's name" class="form-control" name="name">
+					<span class="glyphicon glyphicon-envelope hidden-md hidden-xs hidden-sm" aria-hidden="true"></span>
 					<p class="font1">Link Heroku :</p> <input type="text" placeholder="Link Heroku" class="form-control" name="heroku_link"></td>
 					<p><input id="submit" type="submit" class="btn btn-lg btn-block btn-info submit1" value="Submit"></p>			
 			</form>
