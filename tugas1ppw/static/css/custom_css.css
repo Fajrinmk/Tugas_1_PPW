@@ -1,0 +1,76 @@
+body{
+  margin-top: 70px;
+  font-family: Raleway;
+  background: #36D1DC;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+/* Custom navbar style */
+.navbar-static-top {
+  margin-bottom: 19px;
+}
+.navbar-default .navbar-nav>li>a {
+    cursor: pointer;
+}
+
+/* Textarea not resizeable */
+textarea {
+    resize:none;
+}
+/*section{
+  min-height: 400px;
+}*/
+
+
+#input-list form{
+  width: 50%;
+  margin: 50px auto;
+  position: relative;
+  z-index: 1;
+  background: #00ff00;
+  border: 0 none;
+  border-radius: 3px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  box-sizing: border-box;
+  position: relative;
+}
+#my-list .media:hover {
+  background: #f6f8fa;
+}
+#my-list .media {
+  background: white;
+  border: 0 none;
+  border-radius: 3px;
+}
+#input-list form > h2{
+  font-size: 1.3em;
+  color: #2C3E50;
+  margin-bottom: 10px;
+}
+#input-list form > .status-form-input, #input-list form > .status-form-textarea{
+  padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #2C3E50;
+    font-size: 13px;
+}
+
+#li {
+  display: inline;
+  padding: 5px;
+  background: lightblue;
+  border-radius: 10px;
+}
+.img-circle{
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
+        border: 2px solid #9D9F93;
+        margin:10px 150px 15px 475px;
+}
