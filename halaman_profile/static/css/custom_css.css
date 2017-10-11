@@ -1,15 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>LingIn</title>
-  <link rel="icon" href="http://static1.squarespace.com/static/559c1968e4b0ee9660cb563f/t/55b28e4ce4b07dd5b8929b7d/1437765197224/faviconL-553d9019v1_site_icon.png?format=1000w" type="image/gif" sizes="16x16">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
-</head>
-<style type="text/css">
+body {
+	font-family: Raleway;
+}
+
+#li {
+	display: inline;
+	padding: 5px;
+	background: lightblue;
+	border-radius: 10px;
+}
+.img-circle{
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
+        border: 2px solid #9D9F93;
+        margin:10px 150px 15px 475px;
+}
+
     .navbar {
   background-color: #3589d8;
 }
@@ -129,35 +135,3 @@
   color: #ecdbff;
   background-color: #4455ad;
 }
-</style>
-<body>
-
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <li class="nav-item"><a class="navbar-brand" href="/update-status/">LingIn</a></li>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <ul class="nav navbar-nav navbar-right">
-          <li class="nav-item"><a class="nav-link" href="/update-status/">Status</a></li>
-          <li class="nav-item"><a class="nav-link" href="/halaman_profile/">Profile</a></li>
-          <li class="nav-item"><a class="nav-link" href="/add_friend/">Friends</a></li>
-          <li class="nav-item"><a class="nav-link" href="/dashboard/">Stats</a></li>
-        </ul>
-      </ul>
-    </div>
-  </div>
-</nav>
-  
-<div class="container">
- 
-</div>
-
-</body>
-</html>

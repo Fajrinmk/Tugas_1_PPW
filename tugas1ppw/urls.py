@@ -19,7 +19,7 @@ import dashboard.urls as dashboard
 import update_status.urls as update_status
 import add_friend.urls as add_friend
 import halaman_profile.urls as halaman_profile
-
+from django.views.generic.base import RedirectView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -27,4 +27,5 @@ urlpatterns = [
     url(r'^update-status/', include(update_status,namespace = 'update-status')),
     url(r'^add_friend/', include(add_friend, namespace='add_friend')),
     url(r'^halaman_profile/', include(halaman_profile, namespace='halaman_profile')),
+    url(r'^$', RedirectView.as_view(url='update-status/', permanent = True), name='$'),
 ]
