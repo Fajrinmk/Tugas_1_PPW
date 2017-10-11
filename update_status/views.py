@@ -2,13 +2,13 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from .forms import Status_Form
 from .models import Status
-# from halaman_profile.views import username
+from halaman_profile.views import profile_name
 ##ini buat ngambil username dari halaman profile
 
 response = {}
 def index(request):
     response['author'] = 'Patricia Christiana'
-    # response['username'] = username     
+    response['profile_name'] = profile_name     
     html = 'update_status/status.html'
     response['Status_form'] = Status_Form
     response['status'] = Status.objects.all().order_by('-id')
