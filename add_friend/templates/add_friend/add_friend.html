@@ -42,7 +42,7 @@
 					<a href={{data.heroku_link}}>{{data.heroku_link}}</a>
 				
 				<a href="{% url 'add_friend:delete' data.id %}" method="POST">
-                <input class="to-do-list-delete-button btn btn-lg btn-block btn-danger submit1 " method="POST" data-id="{{data.id}}" action="{% url 'lab-5:delete' data.id %}" value="Delete"></input></a>
+                <input class="to-do-list-delete-button btn btn-lg btn-block btn-danger submit1 " method="POST" data-id="{{data.id}}" action="{% url 'add_friend:delete' data.id %}" value="Delete"></input></a>
 				</div>
 				{% endfor%}
 				{% else %}
