@@ -28,5 +28,5 @@ urlpatterns = [
     url(r'^$',RedirectView.as_view(url='/update-status/',permanent = True), name = 'index'),
     url(r'^add_friend/', include(add_friend, namespace='add_friend')),
     url(r'^halaman_profile/', include(halaman_profile, namespace='halaman_profile')),
-    url(r'^$', RedirectView.as_view(url='update-status/', permanent = True), name='$'),
+    
 ]
