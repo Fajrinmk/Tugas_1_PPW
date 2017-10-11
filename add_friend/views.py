@@ -3,9 +3,12 @@ from .models import new_friend
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404
 from django.urls import reverse
+from django.core.validators import URLValidator
+from django.core.exceptions import ValidationError
 
 # Create your views here.
 response = {}
+response['status'] = "";
 def index(request):
 	#inisiasi elemen apa saja yang akan dimasukan dalam add_friend.html
 	response['author'] = "Welcome to group 3 Website"
@@ -18,9 +21,15 @@ def tambah_teman(request):
 	if(request.method=='POST'):
 		response['name'] = request.POST['name']
 		response['heroku_link'] = request.POST['heroku_link']
-		friends = new_friend(name=response['name'],heroku_link=response['heroku_link'])
-		friends.save()
-		response[new_friend] = friends
+		url = URLValidator()
+		try:
+			url(response['heroku_link'])
+			response['status'] = ""
+			friends = new_friend(name=response['name'],heroku_link=response['heroku_link'])
+			friends.save()
+			response[new_friend] = friends
+		except:
+			response['status'] = "Friend is not found :("
 		return HttpResponseRedirect('/add_friend/')
 	else:
 		return HttpResponseRedirect('/add_friend/')
