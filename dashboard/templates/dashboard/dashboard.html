@@ -1,6 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="col-md-6">name:{{profile_name}}</div>
+
 <div class="col-md-6">feeds:{{feed}}</div>
+{% if database}
 <div class="col-md-6">latest:{{database.status}}  {{database.created_date}}</div>
+{% else %}
+<div class="alert alert-danger text-center">
+	<strong>Oops!</strong> Tidak ada status
+</div>
+{% endif %}
 {% endblock %}
