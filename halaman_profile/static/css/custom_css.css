@@ -69,8 +69,6 @@ textarea {
 }
 .img-circle{
         border-radius: 50%;
-        height: 200px;
-        width: 200px;
         border: 2px solid #9D9F93;
         margin:10px 150px 15px 475px;
 }

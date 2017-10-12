@@ -21,20 +21,18 @@
 <section name="my-list" id="my-list" style="padding-bottom: 20px">
     {% if status %}
     <div class="container"> 
-
         {% for data in status %}
             <div class="kotak" style="padding-top: 15px">
                 <div class="row">
                     <div class="col-sm-8 col-sm-offset-2">
                         <div class="media" style="padding: 40px">
                             <div class="media-left">
-                                <img src="https://pbs.twimg.com/profile_images/891324707189923841/-AAI8S4z_400x400.jpg" class="media-object img-circle" style="width:75px"><!--foto nanti diganti dgn foto di hal profile-->
-                                <p>{{data.status}}</p>
+                                <img src="https://pbs.twimg.com/profile_images/891324707189923841/-AAI8S4z_400x400.jpg" class="media-object img-circle" style="width:60px"><!--foto nanti diganti dgn foto di hal profile-->
                     
                             </div>
                             <div class="media-body">
                                 <h4 class="media-heading"><strong>{{profile_name}}</strong> <small><i>Posted on {{data.created_date}}</i></small></h4><!--nama nanti diganti dgn nama di hal profile-->
-                                <p>{{data.description}}</p>
+                                <p>{{data.status}}</p>
                             </div>
                         </div>
                     </div>
