@@ -3,23 +3,24 @@
 <head>
   <title>LingIn</title>
   <link rel="icon" href="http://static1.squarespace.com/static/559c1968e4b0ee9660cb563f/t/55b28e4ce4b07dd5b8929b7d/1437765197224/faviconL-553d9019v1_site_icon.png?format=1000w" type="image/gif" sizes="16x16">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css">
+  <meta charset="utf-8">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Anton|Arvo" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Anton|Arvo" rel="stylesheet">
 </head>
 <style type="text/css">
 body{
-  margin-top: 70px;
-  font-family: Raleway;
-  background: #36D1DC;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding-top: 70px;
+  /*background: #36D1DC;  /* fallback for old browsers */
+/*background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);   Chrome 10-25, Safari 5.1-6 */
+/*background: linear-gradient(to right, #5B86E5, #36D1DC);  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 /* Custom navbar style */
@@ -157,12 +158,29 @@ color: black;
       margin-top: 150px;
       margin-left: 30px;
     }
+
+    .nav-nav-nav {
+      position: absolute;
+      top: 0%;
+    }
+
+    .nav-nav-nav a {
+      text-decoration: none;
+    }
 /*END*/
 </style>
 <body>
 
 <header>
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<div class="w3-bar w3-black w3-hide-small nav-nav-nav">
+  <a href="#" class="w3-bar-item w3-button">Ling Ling</a>
+  <a href="/update-status/" class="w3-bar-item w3-button"><i class="fa fa-pencil"></i></a>
+  <a href="/halaman_profile/" class="w3-bar-item w3-button"><i class="fa fa-user-circle-o"></i></a>
+  <a href="/add_friend/" class="w3-bar-item w3-button"><i class="fa fa-user-plus"></i></a>
+  <a href="/dashboard/" class="w3-bar-item w3-button"><i class="fa fa-bar-chart "></i></a>
+
+</div>
+<!-- <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -183,7 +201,7 @@ color: black;
       </ul>
     </div>
   </div>
-</nav>
+</nav> -->
 </header>
   <content>
     {% block content %}
