@@ -35,20 +35,23 @@
 		</div>
 	</div>
 	<div class="container" id="my-list">
-			<div class="d-flex flex-row align-items-start flex-wrap"><h2 align="center" id="judul-teman"><font face:"Anton|Arvo" color="#cfcfcf">Your Friend list
+			<div class="row"><h2 align="center" id="judul-teman"><font face:"Anton|Arvo" color="#cfcfcf">Your Friend list
 				<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></font></h2>
 				{% if new_friend %}
 				{% for data in new_friend %}
-				<div class="p-2 flex_list_nama">
-					<h2>{{data.name}}</h2> 
+				<div class="col-md-4">
+						<div class="post-it">
+					<h2 class="data-nama">{{data.name}}</h2> 
 					<!-- <span class="glyphicon glyphicon-user hidden-md hidden-xs hidden-sm" aria-hidden="true"></span> -->
-					<h4 class="font1">Link Heroku :</h4>
-					<a href={{data.heroku_link}}>{{data.heroku_link}}</a>
-					<p>{{data.created_date}}</p>
+					<h4 class="font1 data-heroku">Link Heroku :</h4>
+					<a href={{data.heroku_link}} class="data-heroku text-heroku">{{data.heroku_link}}</a>
+					<p class="data-heroku">{{data.created_date}}</p>
 				
-				<a href="{% url 'add_friend:delete' data.id %}" method="POST">
+				<a href="{% url 'add_friend:delete' data.id %}" method="POST" class="data-delete">
                 <input class="to-do-list-delete-button btn btn-lg btn-block btn-danger submit1 " method="POST" data-id="{{data.id}}" action="{% url 'add_friend:delete' data.id %}" value="Delete"></input></a>
 				</div>
+			</div>
+
 				{% endfor%}
 				{% else %}
             <div class="alert alert-danger text-center">
@@ -56,9 +59,9 @@
             </div>
             {% endif %}
 
-			</div>
+	</div>
 
-		</div>
+</div>
 
 	<footer></footer>
 </div>
