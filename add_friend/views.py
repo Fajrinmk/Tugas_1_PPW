@@ -17,6 +17,7 @@ def index(request):
 	html = 'add_friend/add_friend.html'
 	return render(request,html,response) #mengirimkkan semua elemen dalam response ke alamat html
 
+
 def tambah_teman(request):
 	if(request.method=='POST'):
 		response['name'] = request.POST['name']
