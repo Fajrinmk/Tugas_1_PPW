@@ -1,7 +1,7 @@
 body{
   margin-top: 70px;
   font-family: Raleway;
-  background: #36D1DC;  /* fallback for old browsers */
+  background: rgb(19, 37, 37);  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
@@ -64,11 +64,19 @@ textarea {
 #li {
   display: inline;
   padding: 5px;
-  background: lightblue;
+  background: rgb(173, 230, 230);
   border-radius: 10px;
 }
 .img-circle{
+<<<<<<< HEAD
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  border: 2px solid #9D9F93;
+  margin:10px 150px 15px 475px;
+=======
         border-radius: 50%;
         border: 2px solid #9D9F93;
         margin:10px 150px 15px 475px;
+>>>>>>> 4ad692ea2c908c0cdb6d7cbbe798a18d88d107d3
 }
