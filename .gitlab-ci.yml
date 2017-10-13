@@ -12,9 +12,7 @@ UnitTest:
         - python manage.py collectstatic --no-input
     when: on_success
     script:
-<<<<<<< HEAD
-        - coverage run --include='update_status/*,add_friend/*,dashboard/*,halaman_profile/*' manage.py test
-=======
+
         - coverage run --include='update_status/*, add_friend/*, dashboard/*, halaman_profile/*' manage.py test
         # - coverage run --include='update_dashboard' manage.py test
         #coverage run --include='update_*' manage.py test
