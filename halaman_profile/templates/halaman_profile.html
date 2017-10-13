@@ -13,14 +13,14 @@
 <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	
-
-<br>
-<br>
+ <!-- #tombol edit profil -->
+<section>
+		<button method="get" class="btn btn-default" style = "float :right" onclick="location.href='{% url 'halaman_profile:show_form_edit_profile' %}'">Edit Profile</button>
+</section>
 <br>
 <body>
 	<h3 align = "center"> Profile</h3>
-	<img class = "img-circle" src ="https://assets.teenvogue.com/photos/59922529fc885e5cc9aba96e/master/pass/GettyImages-546939180.jpg" alt = "coba">
+	<img class ="img-circle" src ="https://assets.teenvogue.com/photos/59922529fc885e5cc9aba96e/master/pass/GettyImages-546939180.jpg" alt = "coba">
 <h4 align = "center" >{{ Name }}</h4>
 
 <table align = "center"  width="500" cellspacing = "40" cellpadding="40">
@@ -52,6 +52,9 @@
 	<td align = "left">{{ Email }}</td>
 </tr>
 </table>
+
+<br>
+<br>	
 </body>
 </html>
 {% endblock %}

@@ -1,8 +1,10 @@
 from django.shortcuts import render
 from datetime import datetime, date
 from .models import DataProfile
+# from .forms import edit_profile_form
 
 # Create your views here.
+
 profile_name = 'Gigi Hadid' #TODO implement your name here
 birth_date = date(1995,4,23) #TODO implement your birthday
 birthdate = birth_date.strftime('%d %B %Y')
@@ -10,19 +12,34 @@ gender = 'Female' #TODO implement your gender
 email = 'gigihadid@gmail.com' #TODO implement your email
 desc_profile = "victoria's secret model lalala lilili yeyeye"
 #TODO implement your expertise minimal 3
-expert = ["fashion model", "actress", "wawww"]
+# expert = ["fashion model", "actress", "wawww"]
+expert = "fashion model, actress, wawww"
 
 response = {}
 def index(request):
-    # response['author'] = "Patricia Christiana"
-    # response['Name'] = profile_name
-    # response['Birthday'] = birthdate
-    # response['Gender'] = gender
-    # response['expertise'] = expert
-    # response['Email'] = email
-    # response['Description'] = desc_profile
-
-    Profile = DataProfile(name= profile_name, birthday = birthdate, gender = gender,expertise = expert, email = email, description = desc_profile )
-    response = {'Name':Profile.name, 'Birthday':Profile.birthday,'Gender':Profile.gender,'Expertise':Profile.expertise,'Email':Profile.email,'Description':Profile.description}
+    if (DataProfile.objects.count()==0):
+        Profile = DataProfile(name= profile_name, birthday = birthdate, gender = gender,expertise = expert, email = email, description = desc_profile, id = 1 )
+        Profile.save()
+    profile = DataProfile.objects.last()
+    response = {'Name':profile.name, 'Birthday':profile.birthday,'Gender':profile.gender,'Expertise':profile.expertise.split(","),'Email':profile.email,'Description':profile.description}
     return render(request, 'halaman_profile.html', response)
     
+    #try new feature
+def handle_edit_profile(request):
+    form = edit_profile_form(request.POST or None)
+    if(request.method == 'POST'and form.is_valid()):
+        response['name'] = request.POST['profile_name']
+        response['birthday'] = request.POST['birthdate']
+        response['gender'] = request.POST['gender']
+        response['expertise'] = request.POST['expert']
+        response['email'] = request.POST['email']
+        response['description'] = request.POST['desc_profile']
+        edit = DataProfile(name= profile_name, birthday = birthdate, gender = gender,expertise = expert, email = email, description = desc_profile )
+        edit.save()
+        return HttpResponseRedirect('/halaman_profile/')
+
+def show_form_edit_profile(request):
+     html = "halaman_profile/edit_profile.html"
+     profile = DataProfile.objects.get(id=1)
+     response['profile'] = profile
+     return render(request, html, response)
