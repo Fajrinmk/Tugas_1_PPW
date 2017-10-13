@@ -45,6 +45,3 @@ def show_form_edit_profile(request):
      profile = DataProfile.objects.first()
      response['profile'] = profile
      return render(request, html, response)
-
-def cancel(request):
-    return HttpResponseRedirect('/halaman_profile/')
