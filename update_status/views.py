@@ -3,12 +3,14 @@ from django.http import HttpResponseRedirect
 from .forms import Status_Form
 from .models import Status
 from halaman_profile.views import profile_name
+from halaman_profile.models import DataProfile
 ##ini buat ngambil username dari halaman profile
 
 response = {}
 def index(request):
+    user = DataProfile.objects.first()
     response['author'] = 'Patricia Christiana'
-    response['profile_name'] = profile_name     
+    response['profile_name'] = user.name    
     html = 'update_status/status.html'
     response['Status_form'] = Status_Form
     response['status'] = Status.objects.all().order_by('-id')

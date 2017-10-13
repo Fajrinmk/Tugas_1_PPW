@@ -3,11 +3,17 @@ from django.test import Client
 from django.urls import resolve
 from .views import index, tambah_teman
 from .models import new_friend
+from halaman_profile.models import DataProfile
+from halaman_profile.views import profile_name, birthdate, gender, expert, email, desc_profile
 
 
 # Create your tests here.
  #mengambil elemen pada url add_friend
 class UpdateUnitTest(TestCase):
+    def setUp(self):
+        Profile = DataProfile(name= profile_name, birthday = birthdate, gender = gender,expertise = expert, email = email, description = desc_profile, id = 1 )
+        Profile.save()            
+
     def test_add_friend_url_is_exist(self):
         response = Client().get('/add_friend/')
         self.assertEqual(response.status_code,200)
@@ -42,7 +48,7 @@ class UpdateUnitTest(TestCase):
 
     def test_model_post_error_and_render_the_result(self):
         test = 'Anonymous'
-        response_post = Client().post('/add_friend/tambah_teman', {'name': test, 'heroku_link': 'a'})
+        response_post = Client().post('/add_friend/tambah_teman', {'name': test, 'heroku_link': 'http://azzzz'})
         self.assertEqual(response_post.status_code, 302)
 
         response= Client().get('/add_friend/')

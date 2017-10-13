@@ -4,8 +4,14 @@ from django.urls import resolve
 from .views import index,add_status
 from .models import Status
 from .forms import Status_Form
+from halaman_profile.models import DataProfile
+from halaman_profile.views import profile_name, birthdate, gender, expert, email, desc_profile
 
 class UpdateStatusUnitTest(TestCase):
+	def setUp(self):
+		Profile = DataProfile(name= profile_name, birthday = birthdate, gender = gender,expertise = expert, email = email, description = desc_profile, id = 1 )
+		Profile.save()
+
 	def test_updateStatus_url_is_exist(self):
 		response = Client().get('/update-status/')
 		self.assertEqual(response.status_code, 200)
@@ -52,7 +58,13 @@ class UpdateStatusUnitTest(TestCase):
 		    ["This field is required."]
 		    )
 
+<<<<<<< HEAD
 	def test_root_url_now_is_using_index_page_from_update_status(self):
 		response = Client().get('/')
 		self.assertEqual(response.status_code, 301)
 		self.assertRedirects(response,'/update-status/',301,200)
+=======
+	def test_update_status_post_fail(self):
+		response = Client().post('/update-status/add_status', {'message': ''})
+		self.assertEqual(response.status_code, 301)
+>>>>>>> 32a6390be94d07d413422517fcb5711e66544a6e

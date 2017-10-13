@@ -1,20 +1,36 @@
 body{
-  margin-top: 70px;
+  /* margin-top: 80px; */
   font-family: Raleway;
   background: rgb(19, 37, 37);  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: rgb(0, 0, 0);  /* Chrome 10-25, Safari 5.1-6 */
+background:rgb(0, 0, 0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 
 /* Custom navbar style */
 .navbar-static-top {
-  margin-bottom: 19px;
+  /* margin-bottom: 19px; */
 }
 .navbar-default .navbar-nav>li>a {
     cursor: pointer;
 }
 
+.centerImage
+{
+text-align:center;
+display:round;
+}
+
+.round-base{
+  color : black;
+  bottom :10;
+  width : 80%;
+  margin-left :10%;
+  height: 120vh;
+  background-color: white;
+  border-radius: 15% 15% 15% 15%;
+
+}
 /* Textarea not resizeable */
 textarea {
     resize:none;
@@ -22,7 +38,9 @@ textarea {
 /*section{
   min-height: 400px;
 }*/
-
+h2{
+  color: rgb(253, 253, 253);
+}
 
 #input-list form{
   width: 50%;
@@ -68,15 +86,13 @@ textarea {
   border-radius: 10px;
 }
 .img-circle{
-<<<<<<< HEAD
-  border-radius: 50%;
-  height: 200px;
-  width: 200px;
-  border: 2px solid #9D9F93;
-  margin:10px 150px 15px 475px;
-=======
         border-radius: 50%;
         border: 2px solid #9D9F93;
         margin:10px 150px 15px 475px;
->>>>>>> 4ad692ea2c908c0cdb6d7cbbe798a18d88d107d3
+}
+
+.form-control{
+  width: 50px;
+  height: 150px;
+  margin: auto;
 }

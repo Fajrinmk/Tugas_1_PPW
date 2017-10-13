@@ -13,7 +13,7 @@ UnitTest:
     when: on_success
     script:
 
-        - coverage run --include='update_status/*, add_friend/*, dashboard/*, halaman_profile/*' manage.py test
+        - coverage run --include='add_friend/*, update_status/*, dashboard/*, halaman_profile/*' manage.py test
         # - coverage run --include='update_dashboard' manage.py test
         #coverage run --include='update_*' manage.py test
         - coverage report -m

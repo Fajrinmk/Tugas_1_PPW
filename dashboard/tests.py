@@ -3,11 +3,18 @@ from django.test import Client
 from django.urls import resolve
 from update_status.models import Status
 from .views import index
+from halaman_profile.models import DataProfile
+from halaman_profile.views import profile_name, birthdate, gender, expert, email, desc_profile
 
 class DashboardUnitTest(TestCase):
+    def setUp(self):
+        Profile = DataProfile(name= profile_name, birthday = birthdate, gender = gender,expertise = expert, email = email, description = desc_profile, id = 1 )
+        Profile.save()
+        
     def test_dashboard_url_is_exist(self):
         response = Client().get('/dashboard/')
         self.assertEqual(response.status_code,200)
+
 
     def test_using_index_func(self):
         found = resolve('/dashboard/')
