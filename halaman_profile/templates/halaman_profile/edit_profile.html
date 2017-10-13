@@ -3,35 +3,35 @@
 {% load static %} 
 
 {% block content %}
-<form id="form" class = "form-horizontal" method="POST" action="{% url 'halaman_profile:handle_edit_profile' %}">
-    <h2>Edit Profile</h2>
+<form id="form" class = "form" method="POST" action="{% url 'halaman_profile:handle_edit_profile' %}">
+    <h2 style="color:White" align = "center">Edit Profile</h2>
     {% csrf_token %}
     <div class="form-group">
-        <label for="" class="control-label"> Nama </label>
-        <input type="text" class="form-control" value="{{ profile.name }}">
+        <label for="" class="control-label" style="color:White"> Nama </label>
+        <input type="text" name="profile_name" class="form-control" value="{{ profile.name }}">
     </div>
     <div class="form-group">
-            <label for="" class="control-label"> Birthdate </label>
-            <input type="text" rows="4" cols ="20" class="form-control" value="{{ profile.birthday }}">
+        <label for="" class="control-label" style="color:White"> Birthdate </label>
+        <input type="text" name="birthdate" size ="35" class="form-control" value="{{ profile.birthday }}">
     </div>
     <div class="form-group">
-        <label for="" class="control-label"> Gender </label>
-        <input type="text" class="form-control" value="{{ profile.gender }}">
+        <label for="" class="control-label" style="color:White"> Gender </label>
+        <input type="text" name="gender" class="form-control" value="{{ profile.gender }}">
     </div>
     <div class="form-group">
-        <label for="" class="control-label"> Expertise </label>
-        <input type="text" class="form-control" value="{{ profile.expertise }}">
+        <label for="" class="control-label" style="color:White"> Expertise </label>
+        <input type="text" name="expert" class="form-control" value="{{ profile.expertise }}">
     </div>
     <div class="form-group">
-        <label for="" class="control-label"> Email </label>
-        <input type="text" class="form-control" value="{{ profile.email }}">
+        <label for="" class="control-label" style="color:White"> Email </label>
+        <input type="text" name="email" class="form-control" value="{{ profile.email }}">
     </div>
     <div class="form-group">
-        <label for="" class="control-label"> Description </label>
-        <input type="text" class="form-control" value="{{ profile.description }}">
+        <label for="" class="control-label" style="color:White"> Description </label>
+        <input type="text" name="desc_profile" class="form-control" value="{{ profile.description }}">
     </div>
     
-    <input type="submit" value="Submit" formaction = "/halaman_profile/show_form_edit_profile/handle_edit_profile">
-    <input type="submit" value="Cancel" formaction = "/show_form_edit_profile">
+    <input type="submit" value="Submit">
+    <button href="/halaman_profile/">Cancel</button>
 </form>
 {% endblock %}

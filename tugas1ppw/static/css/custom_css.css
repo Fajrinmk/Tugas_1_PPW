@@ -1,8 +1,8 @@
 body{
   margin-top: 70px;
   font-family: Raleway;
-  background: #36D1DC;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
+  background: rgb(19, 37, 37);  /* fallback for old browsers */
+background: rgb(0, 0, 0);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
@@ -15,6 +15,15 @@ background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, F
     cursor: pointer;
 }
 
+.roundbase{
+  color : black;
+  width : 80%;
+  margin-left :10%;
+  height: 88%;
+  background-color: white;
+  border-radius: 40% 40% 40% 40%;
+
+}
 /* Textarea not resizeable */
 textarea {
     resize:none;
@@ -22,7 +31,9 @@ textarea {
 /*section{
   min-height: 400px;
 }*/
-
+h2{
+  color: rgb(253, 253, 253);
+}
 
 #input-list form{
   width: 50%;
@@ -64,13 +75,12 @@ textarea {
 #li {
   display: inline;
   padding: 5px;
-  background: lightblue;
+  background: rgb(173, 230, 230);
   border-radius: 10px;
 }
 .img-circle{
         border-radius: 50%;
-        height: 200px;
-        width: 200px;
         border: 2px solid #9D9F93;
         margin:10px 150px 15px 475px;
 }
+

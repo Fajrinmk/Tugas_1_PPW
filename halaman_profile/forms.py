@@ -1,9 +1,8 @@
 # from django import forms
-# # from .views import birthdate, gender, email,desc_profile,expert,profile_name
+# from .views import birthdate, gender, email,desc_profile,expert,profile_name
 # from .models import DataProfile
 
-# # class edit_profile_form(forms.Form):
-
+# class edit_profile_form(forms.Form):
 #     profile = DataProfile.objects.get(pk=1)
 
 #     error_messages = {
