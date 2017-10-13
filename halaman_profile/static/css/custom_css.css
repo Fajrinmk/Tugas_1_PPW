@@ -1,5 +1,5 @@
 body{
-  margin-top: 70px;
+  /* margin-top: 80px; */
   font-family: Raleway;
   background: rgb(19, 37, 37);  /* fallback for old browsers */
 background: rgb(0, 0, 0);  /* Chrome 10-25, Safari 5.1-6 */
@@ -9,10 +9,16 @@ background:rgb(0, 0, 0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12
 
 /* Custom navbar style */
 .navbar-static-top {
-  margin-bottom: 19px;
+  /* margin-bottom: 19px; */
 }
 .navbar-default .navbar-nav>li>a {
     cursor: pointer;
+}
+
+.centerImage
+{
+text-align:center;
+display:round;
 }
 
 .round-base{
@@ -20,9 +26,9 @@ background:rgb(0, 0, 0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12
   bottom :10;
   width : 80%;
   margin-left :10%;
-  height: 90vh;
+  height: 120vh;
   background-color: white;
-  border-radius: 25% 25% 25% 25%;
+  border-radius: 15% 15% 15% 15%;
 
 }
 /* Textarea not resizeable */

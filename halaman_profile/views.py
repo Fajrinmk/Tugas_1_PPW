@@ -19,7 +19,6 @@ expert = "fashion model, actress, wawww"
 response = {}
 def index(request):
     if (DataProfile.objects.count()==0):
-        print("ASDASDASD")
         Profile = DataProfile(name= profile_name, birthday = birthdate, gender = gender,expertise = expert, email = email, description = desc_profile, id = 1 )
         Profile.save()
     profile = DataProfile.objects.first()
@@ -37,8 +36,6 @@ def handle_edit_profile(request):
     response['expertise'] = request.POST['expert']
     response['email'] = request.POST['email']
     response['description'] = request.POST['desc_profile']
-    print(request.POST)
-    print("ini jalan?")
     edit = DataProfile(name= response['name'], birthday = response['birthday'], gender = response['gender'],expertise = response['expertise'], email = response['email'], description = response['description'] )
     edit.save()
     return HttpResponseRedirect('/halaman_profile/')
