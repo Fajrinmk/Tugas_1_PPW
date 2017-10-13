@@ -57,3 +57,7 @@ class UpdateStatusUnitTest(TestCase):
 		    form.errors['status'],
 		    ["This field is required."]
 		    )
+
+	def test_update_status_post_fail(self):
+		response = Client().post('/update-status/add_status', {'message': ''})
+		self.assertEqual(response.status_code, 301)
