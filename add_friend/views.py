@@ -32,7 +32,9 @@ def tambah_teman(request):
 		except:
 			response['status'] = "Friend is not found :("
 		return HttpResponseRedirect('/add_friend/')
-
+	else:	
+		return HttpResponseRedirect('/add_friend/')
+		
 def delete(request, id):
     friends = new_friend.objects.filter(pk=id)
     friends.delete()
