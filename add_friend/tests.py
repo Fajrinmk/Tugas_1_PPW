@@ -42,7 +42,7 @@ class UpdateUnitTest(TestCase):
 
     def test_model_post_error_and_render_the_result(self):
         test = 'Anonymous'
-        response_post = Client().post('/add_friend/tambah_teman', {'name': test, 'heroku_link': 'a'})
+        response_post = Client().post('/add_friend/tambah_teman', {'name': test, 'heroku_link': 'http://azzzz'})
         self.assertEqual(response_post.status_code, 302)
 
         response= Client().get('/add_friend/')

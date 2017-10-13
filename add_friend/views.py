@@ -29,7 +29,7 @@ def tambah_teman(request):
 			friends = new_friend(name=response['name'],heroku_link=response['heroku_link'])
 			friends.save()
 			response[new_friend] = friends
-		except:
+		except ValidationError:
 			response['status'] = "Friend is not found :("
 		return HttpResponseRedirect('/add_friend/')
 	else:	
