@@ -3,9 +3,14 @@ from django.test import Client
 from django.urls import resolve
 from .views import index, profile_name,birthdate,gender,email,desc_profile,expert
 import unittest
+from .models import DataProfile
 
 # Create your tests here.
 class HalamanProfileUnitTest(TestCase):
+    def setUp(self):
+        Profile = DataProfile(name= profile_name, birthday = birthdate, gender = gender,expertise = expert, email = email, description = desc_profile, id = 1 )
+        Profile.save()     
+    
     def test_name_is_exist(self):
         response = Client().get('/halaman_profile/')
         self.assertEqual(response.status_code,200)

@@ -4,8 +4,14 @@ from django.urls import resolve
 from .views import index,add_status
 from .models import Status
 from .forms import Status_Form
+from halaman_profile.models import DataProfile
+from halaman_profile.views import profile_name, birthdate, gender, expert, email, desc_profile
 
 class UpdateStatusUnitTest(TestCase):
+	def setUp(self):
+		Profile = DataProfile(name= profile_name, birthday = birthdate, gender = gender,expertise = expert, email = email, description = desc_profile, id = 1 )
+		Profile.save()
+
 	def test_updateStatus_url_is_exist(self):
 		response = Client().get('/update-status/')
 		self.assertEqual(response.status_code, 200)
