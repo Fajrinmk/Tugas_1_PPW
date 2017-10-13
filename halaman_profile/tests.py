@@ -1,6 +1,7 @@
 from django.test import TestCase
 from django.test import Client
 from django.urls import resolve
+from datetime import datetime, date
 from .views import index, profile_name,birthdate,gender,email,desc_profile,expert
 import unittest
 from .models import DataProfile
