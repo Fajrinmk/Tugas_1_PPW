@@ -156,12 +156,4 @@ chromedriver
 chromedriver.exe
 /pratikum/static/*
 /env/*
-/add_friend/migrations/0001_initial.py
-/add_friend/migrations/0002_new_friend_created_date.py
-/add_friend/migrations/0003_auto_20171013_1430.py
-/add_friend/migrations/0003_auto_20171013_1440.py
-/add_friend/migrations/__pycache__/0001_initial.cpython-36.pyc
-/add_friend/migrations/__pycache__/0002_new_friend_created_date.cpython-36.pyc
-/add_friend/migrations/__pycache__/0003_auto_20171011_1954.cpython-36.pyc
-/add_friend/migrations/__pycache__/0003_auto_20171013_1430.cpython-36.pyc
-/add_friend/migrations/__pycache__/0004_auto_20171013_1440.cpython-36.pyc
+
