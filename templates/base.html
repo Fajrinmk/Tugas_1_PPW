@@ -20,7 +20,7 @@
 </head>
 <style type="text/css">
 body{
-  padding-top: 70px;
+  padding-top: 0px;
   background: rgb(0, 0, 0);   /*fallback for old browsers */
 /*background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);   Chrome 10-25, Safari 5.1-6 
 background: linear-gradient(to right, #5B86E5, #36D1DC);  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -195,13 +195,16 @@ color: black;
       font-variant: normal;
       font-weight: 500;
       line-height: 26.4px;
+    header.lalala {
+      position: absolute;
+    }
 /*END*/
 </style>
 <body></body>
 
 <header>
 
-<nav class="navbar navbar-default w3-bar w3-black nav-nav-nav">
+<nav class="navbar navbar-default w3-bar w3-black lalala">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -228,14 +231,14 @@ color: black;
     {% block content %}
     {% endblock %}
   </content>
-<div class="navbar navbar-default navbar-fixed-bottom">
+<footer style="margin-bottom: 5px">
     <div class="container">
-      <marquee behavior="scroll" direction="left"><p class="navbar-text pull-left">© 2017 - Site Built By Fajrin, Josua, Patricia, Safira
+      <marquee behavior="scroll" direction="left"><p class="navbar-text pull-left" style="color: white">© 2017 - Site Built By Fajrin, Josua, Patricia, Safira
       </p></marquee>
 
       
  
     </div>
-
+</footer>
 </body>
 </html>
