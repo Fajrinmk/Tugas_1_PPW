@@ -8,7 +8,7 @@ from django.core.exceptions import ValidationError
 
 # Create your views here.
 response = {}
-response['status'] = '';
+response['status'] = ''
 def index(request):
 	#inisiasi elemen apa saja yang akan dimasukan dalam add_friend.html
 	response['author'] = "Welcome to group 3 Website"
