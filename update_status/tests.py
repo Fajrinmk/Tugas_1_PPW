@@ -51,3 +51,8 @@ class UpdateStatusUnitTest(TestCase):
 		    form.errors['status'],
 		    ["This field is required."]
 		    )
+
+	def test_root_url_now_is_using_index_page_from_update_status(self):
+		response = Client().get('/')
+		self.assertEqual(response.status_code, 301)
+		self.assertRedirects(response,'/update-status/',301,200)
