@@ -2,12 +2,14 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from update_status.models import Status
 from halaman_profile.views import profile_name
+from halaman_profile.models import DataProfile
 from add_friend.models import new_friend
 from datetime import *
 
 def index(request):
+    user = DataProfile.objects.first()
     response = {}
-    response['profile_name'] = profile_name
+    response['profile_name'] = user.name
     stat = Status.objects.all().order_by('-id')
     if (len(stat) > 0):
     	message = stat[0]
