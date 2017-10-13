@@ -8,7 +8,7 @@ from django.core.exceptions import ValidationError
 
 # Create your views here.
 response = {}
-response['status'] = "";
+response['status'] = '';
 def index(request):
 	#inisiasi elemen apa saja yang akan dimasukan dalam add_friend.html
 	response['author'] = "Welcome to group 3 Website"
@@ -17,6 +17,7 @@ def index(request):
 	html = 'add_friend/add_friend.html'
 	return render(request,html,response) #mengirimkkan semua elemen dalam response ke alamat html
 
+
 def tambah_teman(request):
 	if(request.method=='POST'):
 		response['name'] = request.POST['name']
@@ -24,17 +25,15 @@ def tambah_teman(request):
 		url = URLValidator()
 		try:
 			url(response['heroku_link'])
-			response['status'] = ""
+			response['status'] = ''
 			friends = new_friend(name=response['name'],heroku_link=response['heroku_link'])
 			friends.save()
 			response[new_friend] = friends
 		except:
 			response['status'] = "Friend is not found :("
 		return HttpResponseRedirect('/add_friend/')
-	else:
-		return HttpResponseRedirect('/add_friend/')
 
 def delete(request, id):
-        friends = new_friend.objects.filter(pk=id)
-        friends.delete()
-        return HttpResponseRedirect('/add_friend/')
+    friends = new_friend.objects.filter(pk=id)
+    friends.delete()
+    return HttpResponseRedirect('/add_friend/')

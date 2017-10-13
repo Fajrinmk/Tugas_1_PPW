@@ -29,7 +29,7 @@ textarea {
   margin: 50px auto;
   position: relative;
   z-index: 1;
-  background: #00ff00;
+  background: #e2ddeb;
   border: 0 none;
   border-radius: 3px;
   box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
@@ -61,3 +61,6 @@ textarea {
     font-size: 13px;
 }
 
+#warnainput {
+  background-color: 
+}

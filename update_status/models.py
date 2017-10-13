@@ -4,7 +4,5 @@ import pytz
 
 
 class Status(models.Model):
-	def converTime():
-		return timezone.now() + timezone.timedelta(hours=7)
 	status = models.TextField()
-	created_date = models.DateTimeField(default=converTime)
+	created_date = models.DateTimeField(default=timezone.now() + timezone.timedelta(hours=7))
