@@ -6,4 +6,5 @@ import pytz
 class Status(models.Model):
 	status = models.TextField()
 	created_date = models.DateTimeField(default=timezone.now() + timezone.timedelta(hours=7))
+
 	

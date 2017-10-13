@@ -3,16 +3,16 @@
 {% block content %}
   <!-- Header -->
   <header class="w3-container w3-center w3-padding-48 w3-white" style="opacity:0.8;">
-    <h1 class="w3-xxxlarge"><b>GROUP 3's PAGE</b></h1>
+    <h1 class="w3-xxxlarge"><b>Group 3's Page</b></h1>
     <h6>Welcome to the blog of <span class="w3-tag">Group 3</span></h6>
   </header>
 
 <section name="input-list" id="input-list">
     <div class="container">
 <!--         <div class="row"> -->
-            <div class="col-sm-500 col-sm-offset-0" background='pink'>
+            <div class="col-sm-500 col-sm-offset-0" id = "warnainput">
                 <form id="form" method="POST" action="{% url 'update-status:add_status' %}">
-                    <h2><strong>Input Status</strong></h2>
+                    <h2><strong>Input Status..</strong></h2>
                     {% csrf_token %}
                     {{ Status_form }}
                     <input id="submit" type="submit" class="btn btn-md btn-info" value="Submit">
@@ -32,7 +32,7 @@
                     <div class="col-sm-8 col-sm-offset-2">
                         <div class="media" style="padding: 40px">
                             <div class="media-left">
-                                <img src="https://pbs.twimg.com/profile_images/891324707189923841/-AAI8S4z_400x400.jpg" class="media-object img-circle" style="width:60px"><!--foto nanti diganti dgn foto di hal profile-->
+                                <img src="https://assets.teenvogue.com/photos/59922529fc885e5cc9aba96e/master/pass/GettyImages-546939180.jpg" class="media-object img-circle" style="width:60px"><!--foto nanti diganti dgn foto di hal profile-->
                     
                             </div>
                             <div class="media-body">
