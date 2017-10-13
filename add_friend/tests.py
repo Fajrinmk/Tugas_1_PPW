@@ -31,6 +31,15 @@ class UpdateUnitTest(TestCase):
         html_response = response.content.decode('utf8')
         self.assertIn(test, html_response)
 
+    def test_model_post_failed_and_render_the_result(self):
+        test = 'http://www.color-hex.com/'
+        response_post = Client().get('/add_friend/tambah_teman', {'name':test, 'heroku_link': 'a'})
+        self.assertEqual(response_post.status_code, 302)
+
+        response= Client().get('/add_friend/')
+        html_response = response.content.decode('utf8')
+        self.assertNotIn(test, html_response)
+
     def test_model_post_error_and_render_the_result(self):
         test = 'Anonymous'
         response_post = Client().post('/add_friend/tambah_teman', {'name': test, 'heroku_link': 'a'})
