@@ -13,12 +13,15 @@
 </head>
 <div class = "round-base">
 	<br>
-	<body style="padding-top: 0px" source = "https://i.pinimg.com/originals/6a/6f/51/6a6f5154de5bfbf6f82e0c82e12ef55f.jpg">
-		<h3 align = "center" style ="font-size:25pt"><strong> --- Profile --- </strong> </h3>
-		<img align = "center" style = "margin-left:470px" class = "img-circle" src ="https://assets.teenvogue.com/photos/59922529fc885e5cc9aba96e/master/pass/GettyImages-546939180.jpg" width="200" height="200" alt = "coba"></center>
-		
+	<body>
+		<h3 align = "center" style ="font-size:25pt"><strong> Profile </strong> </h3>
+		<p align="center">
+		<img class = "img-circle,centerImage" src ="https://assets.teenvogue.com/photos/59922529fc885e5cc9aba96e/master/pass/GettyImages-546939180.jpg" width="200" height="200" alt = "coba">
+		</p>
 	<h4 align = "center" style ="font-size:18pt" ><i> {{ Name }} </i></h4>
-	<button method="get" class="btn btn-default" style = "margin-left:520px" onclick="location.href='{% url 'halaman_profile:show_form_edit_profile' %}'">Edit Profile</button>
+	<p align = "center">
+	<button method="get" style ="" class="btn btn-default" onclick="location.href='{% url 'halaman_profile:show_form_edit_profile' %}'">Edit Profile</button>
+	</p>
 	<br>
 	<table align = "center"  width="500" cellspacing = "40" cellpadding="40">
 	<tr>
@@ -26,8 +29,14 @@
 		<td align = "left" style ="font-size:12pt">{{ Birthday }}</td>
 	</tr>
 	<tr>
+			<td><br></td>
+	</tr>
+	<tr>
 		<td align = "left" style ="font-size:12pt">Gender</td>
 		<td align = "left" style ="font-size:12pt">{{ Gender }}</td>
+	</tr>
+	<tr>
+			<td><br></td>	
 	</tr>
 	<tr>
 		<td align = "left" style ="font-size:12pt">Expertise</td>
@@ -39,8 +48,16 @@
 			</ul>
 		</td>
 	</tr>
+	<tr>
+			<td><br></td>
+			
+	</tr>
+	<tr>
 		<td align = "left" style ="font-size:12pt">Description</td>
 		<td align = "left" style ="font-size:12pt">{{ Description }}</td>
+	</tr>
+	<tr>
+			<td><br></td>	
 	</tr>
 	<tr>
 		<td align = "left" style ="font-size:12pt">Email</td>
